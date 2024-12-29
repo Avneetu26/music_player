@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #CECECE;
+    background-image: image("img/serene_pic.jpg");
+}
+
+header {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    color: rgba(48, 0, 0, 0.676);
+}
+
+#app {
+    background-image: url(img/music_player.jpeg);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    height: 100vh; 
+    width: 100vw; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#container {
+    display: flex;
+    padding: 20px;
+}
+
+#nowPlaying {
+    text-align: center;
+    /* margin-left: 10%; */
+}
+
+.card-title, .card-text {
+    color: white
+}
+
+/* #songList {
+    height: 100vh
+} */
+
+#all-song-div, #playlist-div {
+    overflow-y: scroll;
+}
+
+#all-song-div label {
+    position: sticky;
+}
+
+#all-song-div, #card-div, #playlist-div {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #8D6F64;
+    height: 400px;
+    opacity: 75%;
+}
+
+#filterDropdown {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5%;
+}
+
+#control-btns {
+    margin: 0 15px;
+    padding: 20px;
+    margin-top: -25px;
+}
+
+#control-btns button, #createPlaylistBtn {
+    background-color: #fff;
+}
+
+#createPlaylistBtn {
+    display: inline;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+
+/* toggle styles */
+.toggle-switch {
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    position: relative;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.slider {
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    background-color: grey;
+    border-radius: 50%;
+    bottom: 4px;
+    left: 4px;
+    transition: all 0.4s ease;
+}
+
+.toggle-switch.active {
+    background-color: #333;
+}
+
+.toggle-switch.active .slider {
+    transform: translateX(26px);
+}
+
+/* Dark Theme (as before) */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-theme header {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+body.dark-theme #all-song-div, body.dark-theme #card-div, body.dark-theme #playlist-div {
+    background-color: #1f1f1f;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme input[type="text"] {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+body.dark-theme h1 {
+    color: #e0e0e0;
+}
+
+body.dark-theme select {
+    background-color: #333;
+    color: black;
+    border: 1px solid #444;
+}
