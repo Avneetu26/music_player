@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<body>
+    
+    <div id="app">
+        <header>
+            <h1 style="margin-left: 38%">My Music Player</h1>
+            <div class="toggle-switch" id="toggleThemeSwitch">
+                <div class="slider"></div>
+            </div>
+        </header>
+        <div id="container">
+            <div id="all-song-div">
+                <h2>All Songs</h2>
+                <label for="filterDropdown">Filter by Genre:</label>
+                <select id="filterDropdown">
+                    <option value="allsongs">All Songs</option>
+                    <option value="Romantic">Romantic</option>
+                    <option value="HipHop">HipHop</option>
+                    
+                </select>
+                <ul id="songList">
+                    <!-- Dynamically populated songs will be here -->
+                </ul>
+            </div>
+            <div id="card-div">
+                <div id="nowPlaying">
+                    <p id="nowPlayingSong">No song is currently playing.</p>
+                </div>
+                <div id="control-btns">
+                    <button id="prevBtn">
+                        Prev
+                    </button>
+                    <button id="addToPlayList">
+                        Add to Playlist
+                    </button>
+                    <button id="nextBtn">
+                        Next
+                    </button>
+                </div>
+                
+            </div>
+            <div id="playlist-div">
+                <input style="width: auto;" type="text" id="searchPlaylist" placeholder="Search for a playlist...">
+                <button id="createPlaylistBtn">Create Playlist</button>
+                <div>
+                    <h2>Current Playlist</h2>
+                    <ul id="playlistSongs">
+                        <!-- Dynamically populated songs will be here -->
+                    </ul>
+                </div>
+                <div>
+                    <h2>All Playlists</h2>
+                </div>
+                <ul id="playlistList">
+                    <!-- Dynamically populated playlists will be here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
